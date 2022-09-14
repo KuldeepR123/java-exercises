@@ -1,4 +1,4 @@
-package com.example.kuldeep;
+package com.example.string_exercise;
 import java.util.Scanner;
 
 public class StringExercise {
@@ -53,19 +53,19 @@ public class StringExercise {
         StringBuffer name = new StringBuffer("abcdefghij");
         StringBuilder name_ = new StringBuilder("abcdefghi");
 
-        String s = "abcde";
-        String u,v,w;
+        String string = "abcde";
+        String str,str1,str2;
         System.out.println("Enter a string to remove whitespace");
-        w = scan.nextLine();
-        StringBuilder myname = new StringBuilder(w);
+        str2 = scan.nextLine();
+        StringBuilder myname = new StringBuilder(str2);
         System.out.println("Enter a string ");
-        u = scan.nextLine();
+        str = scan.nextLine();
         System.out.println("Enter s substring");
-        v = scan.nextLine();
+        str1 = scan.nextLine();
         stringBuffer(name);
         stringBuilder(name_);
         removeWhitespace(myname);
-        reverseString(s);
-        System.out.println(subStrings(u,v));
+        reverseString(string);
+        System.out.println(subStrings(str,str1));
     }
 }

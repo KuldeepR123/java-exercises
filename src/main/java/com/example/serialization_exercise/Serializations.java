@@ -1,20 +1,7 @@
-package com.example.kuldeep;
+package com.example.serialization_exercise;
 
 import java.io.*;
 
-class Student implements Serializable {
-    int age;
-    Student(int age){
-        this.age = age;
-    }
-}
-class Employer extends Student{
-    long salary;
-    Employer(int age, long salary){
-        super(age);
-        this.salary = salary;
-    }
-}
 public class Serializations {
     static void writeObject(Student obj)throws Exception{
         File f = new File("serializable.txt");

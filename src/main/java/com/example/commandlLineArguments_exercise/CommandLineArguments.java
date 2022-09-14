@@ -1,4 +1,4 @@
-package com.example.kuldeep;
+package com.example.commandlLineArguments_exercise;
 
 public class CommandLineArguments {
     public static void main(String[] args){

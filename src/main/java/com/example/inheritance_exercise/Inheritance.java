@@ -1,4 +1,4 @@
-package com.example.kuldeep;
+package com.example.inheritance_exercise;
 class Member{
     String name;
     int age;
@@ -37,9 +37,9 @@ class Manager extends Member{
 }
 public class Inheritance {
     public static void main(String[] args){
-        Employee emp = new Employee("Kuldeep",22,123456,"Rajkot",1000,"Machine Learning");
-        Manager man = new Manager("KD",30,1234567,"Gujarat",20000,"Computer Science");
-        emp.print();
-        man.print();
+        Employee employee = new Employee("Kuldeep",22,123456,"Rajkot",1000,"Machine Learning");
+        Manager manager = new Manager("KD",30,1234567,"Gujarat",20000,"Computer Science");
+        employee.print();
+        manager.print();
     }
 }

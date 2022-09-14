@@ -1,4 +1,4 @@
-package com.example.kuldeep;
+package com.example.controlStatements_exercise;
 
 import java.util.Scanner;
 

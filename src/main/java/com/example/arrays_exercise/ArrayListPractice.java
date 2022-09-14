@@ -1,4 +1,4 @@
-package com.example.kuldeep;
+package com.example.arrays_exercise;
 
 import java.util.ArrayList;
 

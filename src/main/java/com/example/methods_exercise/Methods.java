@@ -1,4 +1,4 @@
-package com.example.kuldeep;
+package com.example.methods_exercise;
 
 import java.util.Scanner;
 import java.time.temporal.ChronoUnit;
@@ -7,22 +7,22 @@ public class Methods {
     static int parse(String s){
         return Integer.parseInt(s);
     }
-    static void fineCalculate(String actuald, String actualm, String actualy, String returnedd,
-                              String returndem, String returnedy)
+    static void fineCalculate(String actualDay, String actualMonth, String actualYear, String returnedDate,
+                              String returnedMonth, String returnedYear)
     {
-        String expected = "".format("%s-%s-%s",actualy,actualm,actuald);
-        String returned = "".format("%s-%s-%s",returnedy,returndem,returnedd);
+        String expected = String.format("%s-%s-%s",actualYear,actualMonth,actualDay);
+        String returned = String.format("%s-%s-%s",returnedYear,returnedMonth,returnedDate);
 
         LocalDate expect = LocalDate.parse(expected);
         LocalDate returns = LocalDate.parse(returned);
 
         long noOfDaysBetween = ChronoUnit.DAYS.between(expect, returns);
 
-        if (parse(actualy) > parse(returnedy)) {
+        if (parse(actualYear) > parse(returnedYear)) {
             System.out.println("10000 Hackos");
-        } else if ((parse(returndem) > parse(actualm) && parse(returndem) <= 12) && (returnedy.equals(actualy))) {
+        } else if ((parse(returnedMonth) > parse(actualMonth) && parse(returnedMonth) <= 12) && (returnedYear.equals(actualYear))) {
             System.out.println("The fine = " + (500 * noOfDaysBetween));
-        } else if (((parse(returnedd) > parse(actuald)) && (parse(actuald) <= 30)) && ((returndem.equals(actualm)) && (returnedy.equals(actualy)))) {
+        } else if (((parse(returnedDate) > parse(actualDay)) && (parse(actualDay) <= 30)) && ((returnedMonth.equals(actualMonth)) && (returnedYear.equals(actualYear)))) {
             System.out.println("The fine is = " + 15 * noOfDaysBetween);
         }
         else {
@@ -33,8 +33,12 @@ public class Methods {
     public static void main(String[] args){
         String[] actuallyReturnDate;
         String[] returnedDate;
-        String actualDay,actualMonth,actualYear;
-        String returnDay, returnMonth, returnYear;
+        String actualDay;
+        String actualMonth;
+        String actualYear;
+        String returnDay;
+        String returnMonth;
+        String returnYear;
         Scanner scan = new Scanner(System.in);
         System.out.println("Pass from here");
         actuallyReturnDate = scan.nextLine().split(" ");

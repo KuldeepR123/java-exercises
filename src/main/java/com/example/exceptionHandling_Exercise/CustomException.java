@@ -1,12 +1,7 @@
-package com.example.kuldeep;
+package com.example.exceptionHandling_Exercise;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-class ParseIntegerException extends Exception{
-    public String toString(){
-        return "Invalid Elasticsearch port configuration";
-    }
-}
 public class CustomException {
         static void check(String num) throws ParseIntegerException, InputMismatchException {
             if (Integer.parseInt(num) > 65000) {
@@ -21,7 +16,7 @@ public class CustomException {
                 check(num);
             }
             catch(ParseIntegerException e){
-                System.out.println(e);
+                e.printStackTrace();
             }
         }
 }

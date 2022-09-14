@@ -1,22 +1,23 @@
-package com.example.kuldeep;
+package com.example.arrays_exercise;
 
 import java.util.Scanner;
 
 class MatrixMultiplication{
-    int[][] matrix1, matrix2;
-    int[][] C = new int[3][3];
+    int[][] matrix1;
+    int[][] matrix2;
+    int[][] multiplicationResult = new int[3][3];
     MatrixMultiplication(int[][] matrix1, int[][] matrix2){
         this.matrix1 = matrix1;
         this.matrix2 = matrix2;
         for(int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                C[i][j] = 0;
+                multiplicationResult[i][j] = 0;
                 for (int k = 0; k < 3; k++) {
-                    C[i][j] = C[i][j] + matrix1[i][k] * matrix2[k][j];
+                    multiplicationResult[i][j] = multiplicationResult[i][j] + matrix1[i][k] * matrix2[k][j];
                 }
             }
         }
-        for (int[] v : C) {
+        for (int[] v : multiplicationResult) {
             for (int i : v) {
                 System.out.print(i + " ");
             }
@@ -120,19 +121,19 @@ class PatternOperations{
 }
 public  class ArrayExercise {
     public static void main(String[] args){
-        int[][] A = {{1,2,3},{4,5,6},{7,8,9}};
-        int[][] B = {{1,2,3},{4,5,6},{7,8,9}};
-        int[] array = {1,2,3,4,5,6,7,8,9,10};
-        int[] array1 = {57,6, 16, 54, 58, 2, 31, 14, 45, 80, 84, 75, 46, 87, 59, 49, 34, 43, 64, 51, 76, 70, 26, 62, 21, 81,
+        int[][] arrayA = {{1,2,3},{4,5,6},{7,8,9}};
+        int[][] arrayB = {{1,2,3},{4,5,6},{7,8,9}};
+        int[] number = {1,2,3,4,5,6,7,8,9,10};
+        int[] randomNumbers = {57,6, 16, 54, 58, 2, 31, 14, 45, 80, 84, 75, 46, 87, 59, 49, 34, 43, 64, 51, 76, 70, 26, 62, 21, 81,
                 74, 60, 27, 86, 77, 68, 37, 13, 78, 11, 52, 94, 3, 44, 85, 18, 25, 47, 63, 28, 97, 88, 92, 24};
-        Scanner s = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         int n;
         System.out.print("Enter number : ");
-        n = s.nextInt();
+        n = scan.nextInt();
         System.out.println("Printing Matrix Multiplication");
-        new MatrixMultiplication(A, B);
-        new SubArray(array);
-        new LargestSmallest(array1);
+        new MatrixMultiplication(arrayA, arrayB);
+        new SubArray(number);
+        new LargestSmallest(randomNumbers);
         new PatternOperations(n);
     }
 }

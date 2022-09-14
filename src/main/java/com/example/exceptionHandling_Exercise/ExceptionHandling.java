@@ -1,24 +1,8 @@
-package com.example.kuldeep;
+package com.example.exceptionHandling_Exercise;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.util.Scanner;
-
-class SalaryLimitException extends Exception {
-    public String toString() {
-        return "Salary more than 87000 is not allowed";
-    }
-}
-
-class CustomExceptions extends Exception {
-    public CustomExceptions() {
-        super("Invalid Elastic Search Configuration");
-    }
-
-    public CustomExceptions(String strMessage) {
-        super(strMessage);
-    }
-}
 
 public class ExceptionHandling {
     static void check(int salary) throws SalaryLimitException {
